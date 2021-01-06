@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.AddItemFragment">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.myjetpacgassnmntapplication.data.model.ItemData" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="@dimen/spacing_5dp"
+            android:text="Add Items"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/text_lrg"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rect"
+            android:ems="15"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:hint="@string/item_name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/spacing_5dp"
+
+            android:textColor="@color/black"
+            android:text="@={item.name}"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="number"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:hint="@string/item_Qty"
+            android:text="@={item.qty}"
+            android:maxLength="8"
+            android:padding="@dimen/spacing_5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium"
+            android:background="@drawable/round_rect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.587"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+            app:layout_constraintVertical_bias="0.081" />
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="@={item.rate}"
+            android:maxLength="6"
+            android:hint="@string/item_rate"
+            android:padding="@dimen/spacing_5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium"
+            android:inputType="numberDecimal"
+            android:background="@drawable/round_rect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <EditText
+            android:id="@+id/editTextNumberDecimal2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="numberDecimal"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:hint="@string/item_amount"
+            android:maxLength="12"
+            android:text="@={item.amount}"
+            android:padding="@dimen/spacing_5dp"
+            android:textColor="@color/black"
+            android:background="@drawable/round_rect"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
+            app:layout_constraintVertical_bias="0.109" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:padding="@dimen/padd_10"
+            android:text="@string/add_item"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@android:color/holo_red_light"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2"
+            app:layout_constraintVertical_bias="0.555" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

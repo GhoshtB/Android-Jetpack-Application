@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_medium">50dp</dimen>
+    <dimen name="elevation_little">3dp</dimen>
+    <dimen name="spacing_5dp">5dp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="spacing_15">15dp</dimen>
+    <dimen name="padd_10">10dp</dimen>
+    <dimen name="text_medm">15sp</dimen>
+    <dimen name="spacing_3dp">3dp</dimen>
+    <dimen name="text_lrg">21sp</dimen>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.FragmentOne">
+    <data>
+        <variable
+            name="item"
+            type="com.example.myjetpacgassnmntapplication.data.model.ItemData" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehaviour">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvItemList"
+            android:padding="@dimen/spacing_5dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_add"
+            android:layout_gravity="end|bottom"
+            app:backgroundTint="@android:color/darker_gray"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_marginRight="@dimen/spacing_medium"
+            tools:ignore="ContentDescription"
+            app:tint="@android:color/white"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>
